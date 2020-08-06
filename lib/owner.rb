@@ -60,12 +60,12 @@ class Owner
     Cat.all << cat_to_buy
   end
 
-  def buy_dog(name)
-    dog_to_buy = find_dog_name(name)
-    Dog.all.delete(dog_to_buy)
-    dog_to_buy.owner = self
-    Dog.all << dog_to_buy
-  end
+  # def buy_dog(name)
+  #   dog_to_buy = find_dog_name(name)
+  #   Dog.all.delete(dog_to_buy)
+  #   dog_to_buy.owner = self
+  #   Dog.all << dog_to_buy
+  # end
 
   def walk_dogs
     self.dogs.each do |dog|
