@@ -98,3 +98,4 @@ class Owner
 end
 
 mar= Owner.new('Mar')
+binding.pry
