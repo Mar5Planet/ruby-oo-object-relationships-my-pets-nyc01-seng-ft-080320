@@ -41,31 +41,14 @@ class Owner
     end
   end
 
-  def find_cat_name(name) # returns object
-    Cat.all.find do |cat|
-      cat.name == name
-     end
+ def buy_cat(name)
+    Cat.new(name, self)
   end
 
-  # def find_dog_name(name) # returns object
-  #   Cat.all.find do |cat|
-  #     cat.name == name
-  #   end
-  # end
-
-  def buy_cat(name)
-    cat_to_buy = find_cat_name(name)
-    Cat.all.delete(cat_to_buy)
-    cat_to_buy.owner = self
-    Cat.all << cat_to_buy
+  def buy_dog(name)
+    Dog.new(name, self)
   end
 
-  # def buy_dog(name)
-  #   dog_to_buy = find_dog_name(name)
-  #   Dog.all.delete(dog_to_buy)
-  #   dog_to_buy.owner = self
-  #   Dog.all << dog_to_buy
-  # end
 
   def walk_dogs
     self.dogs.each do |dog|
