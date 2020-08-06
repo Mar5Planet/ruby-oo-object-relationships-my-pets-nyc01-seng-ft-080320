@@ -47,11 +47,11 @@ class Owner
      end
   end
 
-  def find_dog_name(name) # returns object
-    Cat.all.find do |cat|
-      cat.name == name
-    end
-  end
+  # def find_dog_name(name) # returns object
+  #   Cat.all.find do |cat|
+  #     cat.name == name
+  #   end
+  # end
 
   def buy_cat(name)
     cat_to_buy = find_cat_name(name)
