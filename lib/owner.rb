@@ -97,4 +97,4 @@ class Owner
 
 end
 
-
+mar= Owner.new('Mar')
